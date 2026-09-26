@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#315C72">
+<title>Aprenda o Celular | Guia Prático</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <a href="#" class="logo" onclick="goHome();return false">
+      <span class="logo-mark">⌕</span>
+      <span>Aprenda o Celular</span>
+    </a>
+    <div class="header-actions">
+      <button class="header-btn" onclick="changeFont(-1)" aria-label="Diminuir fonte">A−</button>
+      <button class="header-btn" onclick="changeFont(1)" aria-label="Aumentar fonte">A+</button>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+<section class="home active" id="home">
+  <div class="hero">
+    <div>
+      <div class="eyebrow">Guia prático</div>
+      <h1>Aprenda a usar o celular com mais confiança.</h1>
+      <p>Um conteúdo simples e direto para quem quer entender melhor as funções do celular, sem precisar dominar termos técnicos.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#assuntos">Começar agora</a>
+        <button class="btn btn-secondary" onclick="openLesson('duvidas')">Ver dúvidas frequentes</button>
+      </div>
+    </div>
+    <div class="hero-panel">
+      <div class="small">Como funciona</div>
+      <h2>Escolha um assunto e siga os passos.</h2>
+      <p>Cada aula explica uma tarefa comum de forma organizada. Você pode voltar e consultar o conteúdo sempre que precisar.</p>
+      <div class="hero-stat">
+        <div><strong id="total-stat">8</strong><br>assuntos</div>
+        <div><strong id="done-stat">0</strong><br>concluídos</div>
+        <div><strong>100%</strong><br>no seu ritmo</div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section" id="assuntos">
+    <div class="section-head">
+      <div class="kicker">Conteúdo</div>
+      <h2>Por onde você quer começar?</h2>
+      <p>Escolha uma das opções abaixo para abrir o passo a passo.</p>
+      <div class="progress-row">
+        <div class="progress-track"><div class="progress-fill" id="progress"></div></div>
+        <span class="progress-text" id="progress-text">0 de 8 concluídos</span>
+      </div>
+    </div>
+    <div class="cards" id="cards"></div>
+  </section>
+</section>
+
+<section class="lesson" id="lesson">
+  <div class="lesson-top">
+    <button class="back" onclick="goHome()">← Voltar aos assuntos</button>
+    <span class="lesson-label" id="lesson-count"></span>
+  </div>
+
+  <div class="lesson-title">
+    <div class="lesson-icon" id="lesson-icon">●</div>
+    <div>
+      <h2 id="lesson-title"></h2>
+      <p id="lesson-subtitle"></p>
+    </div>
+  </div>
+
+  <div class="lesson-layout">
+    <div class="lesson-main">
+      <div class="intro">
+        <strong>Antes de começar</strong>
+        <p id="lesson-intro"></p>
+      </div>
+      <div class="steps" id="steps"></div>
+      <div class="faq-list" id="faq-list"></div>
+      <div class="tip" id="tip"></div>
+      <div class="complete">
+        <span id="complete-status">Aula ainda não concluída.</span>
+        <button id="complete-btn" onclick="toggleComplete()">Marcar como concluída</button>
+      </div>
+      <div class="lesson-nav">
+        <button onclick="previousLesson()">← Anterior</button>
+        <button onclick="nextLesson()">Próximo →</button>
+      </div>
+    </div>
+
+    <aside class="lesson-side" id="example-side">
+      <div class="example-label">Exemplo da aula</div>
+      <div class="example-title" id="example-title">Como aparece</div>
+      <p class="example-desc" id="example-desc">Uma representação simples da ação explicada.</p>
+      <div class="example-box" id="example-box"></div>
+      <div class="example-note" id="example-note"></div>
+    </aside>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <strong>Aprenda o Celular</strong>
+      <p>Informação simples para ajudar no uso cotidiano da tecnologia.</p>
+    </div>
+    <div class="developer">
+      Desenvolvido por<br><strong>Ghabryel Maia</strong>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
